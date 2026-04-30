@@ -31,7 +31,7 @@ public class Trabajador {
         return 0;
     }
     
-    public double getSueldoNeto() {
+    public double getSueldoNeto() { 
         return sueldoBase - getRetencion();
     }
 
@@ -39,5 +39,8 @@ public class Trabajador {
         System.out.println("ID: " + numDoc + " | Empleado: " + nombre + 
                            " | Pensión: " + pension + " | Neto a Pagar: S/ " + getSueldoNeto());
     }
+    
+    public String getTipoDoc() { return tipoDoc; }
+    public String getNumDoc() { return numDoc; }
     
 }
