@@ -65,7 +65,14 @@ public class App {
                             emp.mostrarDatos();
                         }
                     }
-                }
+              }
+                
+            } catch (NumberFormatException e) {
+                System.out.println("Error: Por favor, ingrese un número válido para el sueldo u opción.");
+            } catch (Exception e) {
+       
+                System.out.println(e.getMessage());
+            }  
          }  
         }
        
