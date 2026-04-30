@@ -18,7 +18,7 @@ public class App {
             
             do {
                 try {
-                    System.out.println("\n--- GESTIÓN RR.HH. INNOVADORES S.A. ---");
+                    System.out.println("\n--- GESTION RR.HH. INNOVADORES S.A. ---");
                     System.out.println("1. Registrar nuevo trabajador");
                     System.out.println("2. Listar planilla y cálculos");
                     System.out.println("3. Salir");
@@ -37,13 +37,13 @@ public class App {
                         String numero = sc.nextLine();
                         
                         if (tipo.equalsIgnoreCase("DNI") && numero.length() != 8) {
-                            throw new Exception("Error: El DNI debe tener exactamente 8 dígitos.");
+                            throw new Exception("Error: El DNI debe tener exactamente 8 digitos");
                         }
                         if (tipo.equalsIgnoreCase("RESIDENCIA") && numero.length() != 11) {
-                            throw new Exception("Error: El documento de Residencia debe tener 11 dígitos.");
+                            throw new Exception("El documento de Residencia debe tener 11 digitos");
                         }
                         
-                        System.out.print("Régimen de pensión (INTEGRA/PRIMA/HABITAT/ONP): ");
+                        System.out.print("Regimen de pensión (INTEGRA/PRIMA/HABITAT/ONP) ");
                         String pension = sc.nextLine();
                         
                         System.out.print("Sueldo Base: ");
@@ -52,7 +52,7 @@ public class App {
                         Trabajador t = new Trabajador(nombre, tipo, numero, pension, sueldo);
                         lista.add(t);
                         
-                        System.out.println("¡Trabajador registrado con éxito!");
+                        System.out.println("Trabajador registrado con exito!");
                         
                     } else if (opcion == 2) {
                         System.out.println("\n--- REPORTE DE PLANILLA ---");
@@ -66,7 +66,7 @@ public class App {
                     }
                     
                 } catch (NumberFormatException e) {
-                    System.out.println("Error: Por favor, ingrese un número válido para el sueldo u opción.");
+                    System.out.println("Por favor, ingrese un numero valido para el sueldo u opcion");
                 } catch (Exception e) {
                     System.out.println(e.getMessage());
                 }
