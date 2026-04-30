@@ -37,10 +37,10 @@ public class App {
                     String numero = sc.nextLine();
                     
                if (tipo.equalsIgnoreCase("DNI") && numero.length() != 8) {
-                        throw new Exception("Error: El DNI debe tener exactamente 8 dígitos.");
+                        throw new Exception("El DNI debe tener exactamente 8 dígitos");
                     }
                     if (tipo.equalsIgnoreCase("RESIDENCIA") && numero.length() != 11) {
-                        throw new Exception("Error: El documento de Residencia debe tener 11 dígitos.");
+                        throw new Exception("El documento de Residencia debe tener 11 dígitos");
                     }  
                     
                 System.out.print("Régimen de pensión (INTEGRA/PRIMA/HABITAT/ONP): ");
@@ -49,9 +49,24 @@ public class App {
                     System.out.print("Sueldo Base: ");
                     double sueldo = Double.parseDouble(sc.nextLine());
 
-                    // Creamos el objeto Trabajador y lo agregamos a la lista
+                    
                     Trabajador t = new Trabajador(nombre, tipo, numero, pension, sueldo);
                     lista.add(t);    
+                    
+                    System.out.println("Trabajador registrado");
+              } else if (opcion == 2) 
+              {
+                    System.out.println("\n--- REPORTE DE PLANILLA ---");
+                    if (lista.isEmpty()) {
+                        System.out.println("No hay trabajadores registrados.");
+                    } else {
+                        // Recorremos la lista de objetos
+                        for (Trabajador emp : lista) {
+                            emp.mostrarDatos();
+                        }
+                    }
+                }
+         }  
         }
        
     }  
