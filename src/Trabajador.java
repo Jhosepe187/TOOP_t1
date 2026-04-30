@@ -29,4 +29,15 @@ public class Trabajador {
         if (pension.equalsIgnoreCase("HABITAT")) return sueldoBase * 0.127;
         if (pension.equalsIgnoreCase("ONP"))     return sueldoBase * 0.130;
         return 0;
+    }
+    
+    public double getSueldoNeto() {
+        return sueldoBase - getRetencion();
+    }
+
+    public void mostrarDatos() {
+        System.out.println("ID: " + numDoc + " | Empleado: " + nombre + 
+                           " | Pensión: " + pension + " | Neto a Pagar: S/ " + getSueldoNeto());
+    }
+    
 }
