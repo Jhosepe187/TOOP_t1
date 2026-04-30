@@ -35,8 +35,13 @@ public class App {
                     
                     System.out.print("Número de documento: ");
                     String numero = sc.nextLine();
-
-                   
+                    
+               if (tipo.equalsIgnoreCase("DNI") && numero.length() != 8) {
+                        throw new Exception("Error: El DNI debe tener exactamente 8 dígitos.");
+                    }
+                    if (tipo.equalsIgnoreCase("RESIDENCIA") && numero.length() != 11) {
+                        throw new Exception("Error: El documento de Residencia debe tener 11 dígitos.");
+                    }    
         }
        
     }  
