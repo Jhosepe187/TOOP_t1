@@ -24,6 +24,19 @@ public class App {
                 System.out.println("3. Salir");
                 System.out.print("Seleccione una opción: ");
             }
+                opcion = Integer.parseInt(sc.nextLine());
+
+                if (opcion == 1) {
+                    System.out.print("Nombre completo: ");
+                    String nombre = sc.nextLine();
+                    
+                    System.out.print("Tipo de documento (DNI/RESIDENCIA): ");
+                    String tipo = sc.nextLine();
+                    
+                    System.out.print("Número de documento: ");
+                    String numero = sc.nextLine();
+
+                   
         }
        
     }  
