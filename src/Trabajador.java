@@ -21,5 +21,12 @@ public class Trabajador {
         this.numDoc = numDoc;
         this.pension = pension;
         this.sueldoBase = sueldoBase;
-    }
+        }
+    
+    public double getRetencion() {
+        if (pension.equalsIgnoreCase("INTEGRA")) return sueldoBase * 0.121;
+        if (pension.equalsIgnoreCase("PRIMA"))   return sueldoBase * 0.125;
+        if (pension.equalsIgnoreCase("HABITAT")) return sueldoBase * 0.127;
+        if (pension.equalsIgnoreCase("ONP"))     return sueldoBase * 0.130;
+        return 0;
 }
