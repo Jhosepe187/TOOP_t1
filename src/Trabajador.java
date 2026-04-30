@@ -36,7 +36,7 @@ public class Trabajador {
 
     public void mostrarDatos() {
         System.out.println("ID: " + numDoc + " | Empleado: " + nombre + 
-                           " | Pensión: " + pension + " | Neto a Pagar: S/ " + getSueldoNeto());
+                           " | Pension: " + pension + " | Neto a Pagar: S/ " + getSueldoNeto());
     }
     
     public String getTipoDoc() { return tipoDoc; }

@@ -20,9 +20,9 @@ public class App {
                 try {
                     System.out.println("\n--- GESTION RR.HH. INNOVADORES S.A. ---");
                     System.out.println("1. Registrar nuevo trabajador");
-                    System.out.println("2. Listar planilla y cálculos");
+                    System.out.println("2. Listar planilla y calculos");
                     System.out.println("3. Salir");
-                    System.out.print("Seleccione una opción: ");
+                    System.out.print("Seleccione una opcion: ");
                     
                     opcion = Integer.parseInt(sc.nextLine());
                     
