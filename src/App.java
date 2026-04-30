@@ -41,7 +41,17 @@ public class App {
                     }
                     if (tipo.equalsIgnoreCase("RESIDENCIA") && numero.length() != 11) {
                         throw new Exception("Error: El documento de Residencia debe tener 11 dígitos.");
-                    }    
+                    }  
+                    
+                System.out.print("Régimen de pensión (INTEGRA/PRIMA/HABITAT/ONP): ");
+                    String pension = sc.nextLine();
+                    
+                    System.out.print("Sueldo Base: ");
+                    double sueldo = Double.parseDouble(sc.nextLine());
+
+                    // Creamos el objeto Trabajador y lo agregamos a la lista
+                    Trabajador t = new Trabajador(nombre, tipo, numero, pension, sueldo);
+                    lista.add(t);    
         }
        
     }  
