@@ -27,23 +27,23 @@ public class App {
                     opcion = Integer.parseInt(sc.nextLine());
                     
                     if (opcion == 1) {
-                        System.out.print("Nombre completo: ");
+                        System.out.print("Nombre co1mpleto: ");
                         String nombre = sc.nextLine();
                         
                         System.out.print("Tipo de documento (DNI/RESIDENCIA): ");
                         String tipo = sc.nextLine();
                         
-                        System.out.print("Número de documento: ");
+                        System.out.print("Numero de documento: ");
                         String numero = sc.nextLine();
                         
                         if (tipo.equalsIgnoreCase("DNI") && numero.length() != 8) {
-                            throw new Exception("Error: El DNI debe tener exactamente 8 digitos");
+                            throw new Exception("El DNI debe tener exactamente 8 digitos");
                         }
                         if (tipo.equalsIgnoreCase("RESIDENCIA") && numero.length() != 11) {
                             throw new Exception("El documento de Residencia debe tener 11 digitos");
                         }
                         
-                        System.out.print("Regimen de pensión (INTEGRA/PRIMA/HABITAT/ONP) ");
+                        System.out.print("Regimen de pension (INTEGRA/PRIMA/HABITAT/ONP) ");
                         String pension = sc.nextLine();
                         
                         System.out.print("Sueldo Base: ");
